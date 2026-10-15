@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXUS CLOUD</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080b12;
+  color: white;
+}
+header {
+  padding: 22px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #202838;
+}
+.logo { font-size: 22px; font-weight: 900; }
+.logo span { color: #38f5a6; }
+.tag { color: #38f5a6; font-size: 12px; }
+main { padding: 30px 6%; }
+.hero {
+  padding: 35px 24px;
+  border-radius: 20px;
+  background: linear-gradient(135deg,#142c32,#111326 65%,#202044);
+  border: 1px solid #25453f;
+}
+h1 { font-size: 36px; margin: 10px 0; }
+p { color: #b6c0d0; line-height: 1.5; }
+.btn {
+  display: inline-block;
+  padding: 13px 20px;
+  background: #38f5a6;
+  color: #07120d;
+  font-weight: bold;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+}
+h2 { margin-top: 35px; }
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(145px,1fr));
+  gap: 15px;
+}
+.game {
+  background: #111724;
+  border: 1px solid #273247;
+  border-radius: 14px;
+  padding: 18px;
+}
+.cover { font-size: 42px; padding: 15px 0; }
+.game h3 { margin: 5px 0; }
+.small { font-size: 12px; }
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 12px;
+}
+.plan {
+  padding: 18px;
+  background: #111724;
+  border: 1px solid #273247;
+  border-radius: 14px;
+}
+.plan strong { color: #38f5a6; }
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  color: #778398;
+  font-size: 12px;
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">NEXUS <span>CLOUD</span></div>
+  <div class="tag">● PROJETO EM TESTE</div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="tag">SEU PC. EM QUALQUER LUGAR.</div>
+    <h1>Seus jogos.<br>Sem limites.</h1>
+    <p>Uma nova experiência de cloud gaming está sendo construída.</p>
+    <button class="btn" onclick="document.getElementById('jogos').scrollIntoView({behavior:'smooth'})">
+      EXPLORAR JOGOS ↓
+    </button>
+  </section>
+
+  <h2 id="jogos">🎮 Biblioteca de jogos</h2>
+  <p>Escolhe um jogo para ver o estado do projeto.</p>
+
+  <section class="games">
+    <article class="game">
+      <div class="cover">🚗</div>
+      <h3>Corrida</h3>
+      <p class="small">Streaming ainda não conectado.</p>
+      <button class="btn" onclick="aviso('Corrida')">JOGAR</button>
+    </article>
+    <article class="game">
+      <div class="cover">🧱</div>
+      <h3>Sandbox</h3>
+      <p class="small">Streaming ainda não conectado.</p>
+      <button class="btn" onclick="aviso('Sandbox')">JOGAR</button>
+    </article>
+    <article class="game">
+      <div class="cover">🎯</div>
+      <h3>Ação</h3>
+      <p class="small">Streaming ainda não conectado.</p>
+      <button class="btn" onclick="aviso('Ação')">JOGAR</button>
+    </article>
+  </section>
+
+  <h2>⚡ Escolha sua máquina</h2>
+  <section class="plans">
+    <div class="plan">
+      <strong>NEXUS NORMAL</strong>
+      <p>Para começar.</p>
+      <p>Alvo: 720p</p>
+    </div>
+    <div class="plan">
+      <strong>NEXUS VIP</strong>
+      <p>Mais potência.</p>
+      <p>Alvo: 1080p</p>
+    </div>
+    <div class="plan">
+      <strong>NEXUS VIP SUPREMO</strong>
+      <p>Desempenho máximo.</p>
+      <p>Alvo: até 4K</p>
+    </div>
+  </section>
+  <p class="small">Os planos são conceitos em desenvolvimento, ainda sem máquinas disponíveis.</p>
+</main>
+
+<footer>
+  NEXUS CLOUD © 2026 · Projeto independente em desenvolvimento
+</footer>
+
+<script>
+function aviso(jogo) {
+  alert(jogo + ': o streaming ainda não está conectado. Esta é a versão de teste do NEXUS CLOUD.');
+}
+</script>
+</body>
+</html>
